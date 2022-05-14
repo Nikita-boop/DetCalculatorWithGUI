@@ -33,12 +33,20 @@ double MatrixDet::getDet() {	// точность настраивается при помощи приведения к i
 		tempDet = (long long)det;
 		return (double)tempDet;
 
-	} else {
+	} else {					// округление
 		tempDet = 1;
 		for (int i = 0; i < precision; i++) {
 			tempDet *= 10;
 		}
-		tempDoubleDet = (long long)(det * tempDet) / (double)tempDet;
+		if (det > 0) {
+			tempDoubleDet = (((long long)(det * tempDet * 10) + 5) / (long long)10) / (double)tempDet;
+		} 
+		else if (det < 0) {
+			tempDoubleDet = (((long long)(det * tempDet * 10) - 5) / (long long)10) / (double)tempDet;
+		}
+		else {
+			return 0;
+		}
 		return tempDoubleDet;
 	}
 }

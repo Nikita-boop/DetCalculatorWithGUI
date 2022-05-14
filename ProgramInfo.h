@@ -155,7 +155,7 @@ namespace Matrix {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(190, 13);
 			this->label5->TabIndex = 0;
-			this->label5->Text = L"Текущая версия программы: V1.0.0";
+			this->label5->Text = L"Текущая версия программы: V1.0.1";
 			// 
 			// groupBox3
 			// 
@@ -287,7 +287,7 @@ private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Win
 	System::Diagnostics::Process::Start("mailto:nikita.nebolsin@gmail.com");
 }
 private: System::Void linkLabel2_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
-	System::Diagnostics::Process::Start("https://www.linkedin.com/in/nikita-nebolsin-77741a1a5/");
+	System::Diagnostics::Process::Start("https://github.com/Nikita-boop/Matrix-1course2term-");
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->~ProgramInfo();
